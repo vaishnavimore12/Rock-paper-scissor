@@ -1,0 +1,130 @@
+
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   background-color: rgb(48, 93, 72);
+}
+
+.con1{
+    width: 440px;
+    height: 530px;
+   margin-top: 0px;
+    display: flex;
+    transition: transform 0.5s ease;
+    justify-content: center;
+    position: relative;
+    background-image: url(/public/bg2.jpeg);
+    background-position: center;
+    
+    background-size: cover;
+    border-radius: 3rem;
+    box-shadow: 0 0 10px 10px rgb(10, 75, 17);
+}
+
+.con1.animate {
+    transform: translateY(-10px); /* Moves the container slightly upward */
+  }
+.con1 img{
+   perspective: 1000px;
+   width: 200px;
+   margin-top: 90px;
+}
+
+.user_img img{
+    transform: rotate(90deg);  
+}
+
+.com_img img{
+    transform: rotate(-90deg); 
+}
+
+.result{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin-top: 300px;
+    height: 100px;
+    font-family: "Dancing Script", serif;
+    font-size: 40px;
+   color: rgb(249, 248, 248);
+    
+}
+.option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: 400px;
+    
+}
+
+.option img{
+    width: 50px;
+}
+.option button{
+    padding: 8px;
+    margin-left: 25px;
+    border-radius: 2rem;
+    background-color: rgba(197, 158, 141, 0.888);
+    border: 0;
+    cursor: pointer;
+    transition: 0.7s ease-in-out;
+}
+
+button:hover{
+    background-color: rgba(84, 150, 207, 0.667);
+    transform: translateY(-7px);
+    box-shadow: 0px 5px 25px 0px rgb(22, 12, 22);
+}
+
+button:active{
+    transform: translateY(-px);
+}
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+  }
+  
+  .shake{
+ 
+    animation: shake 0.8s ;
+  }
+
+.vs img{
+    width: 70px;
+    height: 100px;
+    margin-top: 150px;
+    margin-left: 10px;
+}
+
+.user_img label{
+    font-family: "Dancing Script", serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+    position: absolute;
+    margin-top: 80px;
+   margin-left: 70px;
+    
+}
+
+.com_img label{
+    font-family: "Dancing Script", serif;
+    font-size: 30px;
+    font-weight: 500;
+   color: white;
+    position: absolute;
+    margin-top: 80px;
+   margin-left: 70px;
+    
+}
