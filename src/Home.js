@@ -1,17 +1,25 @@
 import { useState } from "react";
-import "../src/styles/home.css";
+import "./home.css";
 
 export function Home() {
-  const buttonImg = ["/hello.png", "/fist.png", "/peace.png"];
-  const userChoice = ["/paper.png", "/rock.png", "/scissor.png"];
+  const buttonImg = [
+    process.env.PUBLIC_URL + "/hello.png",
+    process.env.PUBLIC_URL + "/fist.png",
+    process.env.PUBLIC_URL + "/peace.png",
+  ];
+  const userChoice = [
+    process.env.PUBLIC_URL + "/paper.png",
+    process.env.PUBLIC_URL + "/rock.png",
+    process.env.PUBLIC_URL + "/scissor.png",
+  ];
   const botChoice = [
-    "/black_paper.png",
-    "/black_rock.png",
-    "/black_scissor.png",
+    process.env.PUBLIC_URL + "/black_paper.png",
+    process.env.PUBLIC_URL + "/black_rock.png",
+    process.env.PUBLIC_URL + "/black_scissor.png",
   ];
 
-  const [userImg, setUserImg] = useState("/rock.png");
-  const [botImg, setBotImg] = useState("/black_rock.png");
+  const [userImg, setUserImg] = useState(process.env.PUBLIC_URL + "/rock.png");
+  const [botImg, setBotImg] = useState(process.env.PUBLIC_URL + "/black_rock.png");
   const [animate, setAnimate] = useState(false);
   const [result, setResult] = useState("Make a move");
 
@@ -19,9 +27,9 @@ export function Home() {
     if (userImg === botImg.replace('black_','')) {
       return "It's Tie";
     } else if (
-      (userImg === "/rock.png" && botImg === "/black_scissor.png") ||
-      (userImg === "/scissor.png" && botImg === "/black_paper.png") ||
-      (userImg === "/paper.png" && botImg === "/black_rock.png")
+      (userImg === process.env.PUBLIC_URL + "/rock.png" && botImg === process.env.PUBLIC_URL + "/black_scissor.png") ||
+      (userImg === process.env.PUBLIC_URL + "/scissor.png" && botImg === process.env.PUBLIC_URL + "/black_paper.png") ||
+      (userImg === process.env.PUBLIC_URL + "/paper.png" && botImg === process.env.PUBLIC_URL + "/black_rock.png")
     ) {
       return "You Win";
     } else {
@@ -30,8 +38,8 @@ export function Home() {
   }
 
   const handleClick = (userChoice) => {
-    setUserImg('/rock.png');
-    setBotImg('/black_rock.png');
+    setUserImg(process.env.PUBLIC_URL + '/rock.png');
+    setBotImg(process.env.PUBLIC_URL + '/black_rock.png');
     setAnimate(true);
     setResult("");
 
@@ -59,7 +67,7 @@ export function Home() {
           <img src={userImg} alt="" className={animate ? "shake" : ""} />
         </div>
         <div className="vs">
-          <img src="/vs3.png" alt=""/>
+          <img src={process.env.PUBLIC_URL + "/vs3.png"} alt=""/>
         </div>
         
         <div className="com_img">
