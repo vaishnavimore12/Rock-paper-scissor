@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./home.css";
 
+
 export function Home() {
   const buttonImg = [
     process.env.PUBLIC_URL + "/hello.png",
@@ -49,6 +50,7 @@ export function Home() {
     setUserImg(userChoice);
     const randomBotImg =
     botChoice[Math.floor(Math.random() * botChoice.length)];
+    setUserImg(userChoice);
     setBotImg(randomBotImg);
 
     const gameResult =determineResult(userChoice,randomBotImg);
