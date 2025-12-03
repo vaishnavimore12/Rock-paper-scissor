@@ -1,26 +1,24 @@
 import { useState } from "react";
 import "./home.css";
+import hello from "./images/hello.png";
+import fist from "./images/fist.png";
+import peace from "./images/peace.png";
+import paper from "./images/paper.png";
+import rock from "./images/rock.png";
+import scissor from "./images/scissor.png";
+import bpaper from "./images/black_paper.png";
+import brock from "./images/black_rock.png";
+import bscissor from "./images/black_scissor.png";
+import vs3 from "./images/vs3.png";
 
 
 export function Home() {
-  const buttonImg = [
-    process.env.PUBLIC_URL + "/hello.png",
-    process.env.PUBLIC_URL + "/fist.png",
-    process.env.PUBLIC_URL + "/peace.png",
-  ];
-  const userChoice = [
-    process.env.PUBLIC_URL + "/paper.png",
-    process.env.PUBLIC_URL + "/rock.png",
-    process.env.PUBLIC_URL + "/scissor.png",
-  ];
-  const botChoice = [
-    process.env.PUBLIC_URL + "/black_paper.png",
-    process.env.PUBLIC_URL + "/black_rock.png",
-    process.env.PUBLIC_URL + "/black_scissor.png",
-  ];
+  const buttonImg = [hello,fist,peace];
+  const userChoice = [paper,rock,scissor];
+  const botChoice = [bpaper,brock,bscissor];
 
-  const [userImg, setUserImg] = useState(process.env.PUBLIC_URL + "/rock.png");
-  const [botImg, setBotImg] = useState(process.env.PUBLIC_URL + "/black_rock.png");
+  const [userImg, setUserImg] = useState(rock);
+  const [botImg, setBotImg] = useState(brock);
   const [animate, setAnimate] = useState(false);
   const [result, setResult] = useState("Make a move");
 
@@ -28,9 +26,9 @@ export function Home() {
     if (userImg === botImg.replace('black_','')) {
       return "It's Tie";
     } else if (
-      (userImg === process.env.PUBLIC_URL + "/rock.png" && botImg === process.env.PUBLIC_URL + "/black_scissor.png") ||
-      (userImg === process.env.PUBLIC_URL + "/scissor.png" && botImg === process.env.PUBLIC_URL + "/black_paper.png") ||
-      (userImg === process.env.PUBLIC_URL + "/paper.png" && botImg === process.env.PUBLIC_URL + "/black_rock.png")
+      (userImg === rock && botImg === bscissor) ||
+      (userImg === scissor && botImg === bpaper) ||
+      (userImg === paper && botImg === brock)
     ) {
       return "You Win";
     } else {
@@ -39,30 +37,30 @@ export function Home() {
   }
 
   const handleClick = (userChoice) => {
-    setUserImg(process.env.PUBLIC_URL + '/rock.png');
-    setBotImg(process.env.PUBLIC_URL + '/black_rock.png');
+   
+   
+     setUserImg(rock);
+   
+    setBotImg(brock);
     setAnimate(true);
     setResult("");
-
-    setTimeout(() => {
-    setAnimate(false);
-
-    setUserImg(userChoice);
+    setTimeout(() =>{setAnimate(false);
+      setUserImg(userChoice);
+    
     const randomBotImg =
     botChoice[Math.floor(Math.random() * botChoice.length)];
-    // setUserImg(userChoice);
+    
     setBotImg(randomBotImg);
+      
 
-    setTimeout(()=>{
+
+    
       const gameResult =determineResult(userChoice,randomBotImg);
     setResult(gameResult);
     
-    },50);
-    
+    },300);
     
 
-
-    }, 350);
   };
   return (
     <div className="container">
@@ -73,7 +71,7 @@ export function Home() {
           <img src={userImg} alt="" className={animate ? "shake" : ""} />
         </div>
         <div className="vs">
-          <img src={process.env.PUBLIC_URL + "/vs3.png"} alt=""/>
+          <img src={vs3} alt=""/>
         </div>
         
         <div className="com_img">
