@@ -128,3 +128,49 @@ button:active{
    margin-left: 70px;
     
 }
+.shake {
+    animation: shake 0.3s;
+  }
+  
+
+  @media screen and (max-width: 786px) {
+    .con1 {
+        width: 95%;
+    }
+
+    .user_img img, .com_img img {
+        width: 40%;
+    }
+
+    .vs img {
+        width: 15%;
+    }
+
+    .result {
+        font-size: 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+   
+    .con1{
+        width: 90%;
+        border-radius: 1.5rem;
+    }
+    .user_img img, .com_img img {
+        width: 100%;
+    }
+
+    .vs img {
+        width: 50px;
+    }
+
+    .result {
+        font-size: 1.2rem;
+    }
+
+    .option button img {
+        width: 2rem;
+        height: 2rem;
+    }
+  }

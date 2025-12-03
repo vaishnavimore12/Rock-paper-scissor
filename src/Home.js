@@ -50,11 +50,15 @@ export function Home() {
     setUserImg(userChoice);
     const randomBotImg =
     botChoice[Math.floor(Math.random() * botChoice.length)];
-    setUserImg(userChoice);
+    // setUserImg(userChoice);
     setBotImg(randomBotImg);
 
-    const gameResult =determineResult(userChoice,randomBotImg);
+    setTimeout(()=>{
+      const gameResult =determineResult(userChoice,randomBotImg);
     setResult(gameResult);
+    
+    },50);
+    
     
 
 
