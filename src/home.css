@@ -192,6 +192,9 @@ button:active{
     .user_img img, .com_img img {
         width: 100%;
     }
+    .user_img label, .com_img label{
+    font-size: 1.8rem;
+  }
 
     .vs img {
         width: 50px;
