@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./home.css";
 import hello from "./images/hello.png";
 import fist from "./images/fist.png";
@@ -12,6 +12,22 @@ import bscissor from "./images/black_scissor.png";
 import vs3 from "./images/vs3.png";
 
 export function Home() {
+
+ useEffect(() => {
+  const images = [
+    hello, fist, peace,
+    paper, rock, scissor,
+    bpaper, brock, bscissor,
+    vs3
+  ];
+
+  images.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+}, []);
+
+
   const buttonImg = [hello, fist, peace];
   const userChoice = [paper, rock, scissor];
   const botChoice = [bpaper, brock, bscissor];
@@ -43,6 +59,8 @@ export function Home() {
     setBotImg(brock);
     setAnimate(true);
     setResult("");
+
+     requestAnimationFrame(() => {
     setTimeout(() => {
       setAnimate(false);
       setUserImg(userChoice);
@@ -52,9 +70,10 @@ export function Home() {
 
       setBotImg(randomBotImg);
 
-      const gameResult = determineResult(userChoice, randomBotImg);
-      setResult(gameResult);
+       setResult( determineResult(userChoice, randomBotImg));
+      // setResult(gameResult);
     }, 300);
+  });
   };
   return (
     <div className="container">
