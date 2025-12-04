@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Rock-paper-scissor/static/css/main.7a4bb6b5.css",
-    "main.js": "/Rock-paper-scissor/static/js/main.ae16d4c9.js",
+    "main.js": "/Rock-paper-scissor/static/js/main.99221173.js",
     "static/js/453.c2f0dd07.chunk.js": "/Rock-paper-scissor/static/js/453.c2f0dd07.chunk.js",
-    "static/media/black_rock.png": "/Rock-paper-scissor/static/media/black_rock.efd241435ba370416f77.png",
-    "static/media/paper.png": "/Rock-paper-scissor/static/media/paper.26dd1177eeccc8a958be.png",
-    "static/media/black_scissor.png": "/Rock-paper-scissor/static/media/black_scissor.d38b0b55bdc4debf9eb6.png",
-    "static/media/scissor.png": "/Rock-paper-scissor/static/media/scissor.eb28297e9156f3b3c03c.png",
-    "static/media/black_paper.png": "/Rock-paper-scissor/static/media/black_paper.5fc2d5d291446b8ff9db.png",
-    "static/media/rock.png": "/Rock-paper-scissor/static/media/rock.432c6909fd8d981ade91.png",
+    "static/media/paper.png": "/Rock-paper-scissor/static/media/paper.d3c8b98c3f62296aa4d5.png",
+    "static/media/black_rock.png": "/Rock-paper-scissor/static/media/black_rock.c20fbb2195995aa1e66e.png",
+    "static/media/black_scissor.png": "/Rock-paper-scissor/static/media/black_scissor.dad7e196c4da78c7f20f.png",
+    "static/media/black_paper.png": "/Rock-paper-scissor/static/media/black_paper.9dd6fee10750e8e44b80.png",
+    "static/media/scissor.png": "/Rock-paper-scissor/static/media/scissor.f3a15ee20152433f13ba.png",
+    "static/media/rock.png": "/Rock-paper-scissor/static/media/rock.d5e64fa4a4d588d9a7c2.png",
     "static/media/bg2.jpeg": "/Rock-paper-scissor/static/media/bg2.ca5eb1115e0eb23c4a9b.jpeg",
     "static/media/vs3.png": "/Rock-paper-scissor/static/media/vs3.47f9e01fdd9928481fa8.png",
     "static/media/hello.png": "/Rock-paper-scissor/static/media/hello.88c591629a320ca11a4f.png",
@@ -17,11 +17,11 @@
     "static/media/fist.png": "/Rock-paper-scissor/static/media/fist.c5a97a045027173c16de.png",
     "index.html": "/Rock-paper-scissor/index.html",
     "main.7a4bb6b5.css.map": "/Rock-paper-scissor/static/css/main.7a4bb6b5.css.map",
-    "main.ae16d4c9.js.map": "/Rock-paper-scissor/static/js/main.ae16d4c9.js.map",
+    "main.99221173.js.map": "/Rock-paper-scissor/static/js/main.99221173.js.map",
     "453.c2f0dd07.chunk.js.map": "/Rock-paper-scissor/static/js/453.c2f0dd07.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7a4bb6b5.css",
-    "static/js/main.ae16d4c9.js"
+    "static/js/main.99221173.js"
   ]
 }
