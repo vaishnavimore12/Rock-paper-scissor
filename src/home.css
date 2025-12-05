@@ -190,7 +190,8 @@ button:active{
         border-radius: 1.5rem;
     }
     .user_img img, .com_img img {
-        width: 100%;
+        margin-top: 150px;
+        width: 140px;
     }
     .user_img label, .com_img label{
     font-size: 1.8rem;
@@ -201,10 +202,11 @@ button:active{
     }
 
     .result {
-        font-size: 1.2rem;
+        font-size: 2rem;
     }
 
     .option button img {
+        
         width: 2rem;
         height: 2rem;
     }
